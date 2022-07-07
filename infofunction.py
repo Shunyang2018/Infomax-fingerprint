@@ -12,6 +12,7 @@ from dgllife.model import load_pretrained
 from dgllife.utils import mol_to_bigraph, PretrainAtomFeaturizer, PretrainBondFeaturizer
 from rdkit import Chem
 import torch
+from torch.utils.data import DataLoader
 import pandas as pd
 import numpy as np
 random_state=34
