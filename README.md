@@ -1,7 +1,7 @@
 # Infomax-fingerprint
 300 bit Infomax fingerprint from SMILEs code.
 
-##Usage
+## Usage
 
 you need to be careful about the failed calculation, in case there is a mis match between output df and smiles list.
 
