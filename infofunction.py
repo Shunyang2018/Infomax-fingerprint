@@ -9,14 +9,9 @@ import dgl
 from collections import defaultdict
 from dgl.nn.pytorch.glob import AvgPooling
 from dgllife.model import load_pretrained
-from dgllife.model.model_zoo import *
 from dgllife.utils import mol_to_bigraph, PretrainAtomFeaturizer, PretrainBondFeaturizer
 from rdkit import Chem
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import DataLoader
-import VAE_model
 import pandas as pd
 import numpy as np
 random_state=34
@@ -42,7 +37,6 @@ def smi2infomax(smiles):
         in case there is a mis match between output df and smiles list.
 
     '''
-    processor = VAE_model.ProcessSMILES()
     model = load_pretrained('gin_supervised_infomax')
     ## generate molecular graphs
     graphs = []
